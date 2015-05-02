@@ -25,13 +25,13 @@ app.listen(app.get('port'), function () {
 });
 
 app.get('/', function(req, resp) {
-  resp.write('welcome to the brand new LM Utility!');
+  resp.send('welcome to the brand new LM Utility!');
 });
 
 app.get('/ping', function(req, resp) {
-  resp.write('pong');
+  resp.send('pong');
 });
 
 app.get('/sync/status', function(req, resp) {
-  resp.write('Synced ' + json.stringify(ServiceSync.getInfo()) + ' posts');
+  resp.send('Synced ' + JSON.stringify(ServiceSync.getInfo()) + ' posts');
 });
