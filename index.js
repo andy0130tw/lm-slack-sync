@@ -1,4 +1,5 @@
 var express = require('express');
+var request = require('request');
 
 // monkey-patching request to allow throttling
 // must be loaded before the first request
