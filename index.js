@@ -33,4 +33,4 @@ app.get('/ping', function(req, resp) {
   resp.send('pong');
 });
 
-app.get('/sync/status', ServiceSync.handlers.status);
+app.use('/sync', ServiceSync);
